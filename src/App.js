@@ -4,6 +4,8 @@ import Editable from "./Components/Editable/Editable";
 import { v4 as uuidv4 } from "uuid";
 import { useEffect, useState } from "react";
 import CardInfo from "./Components/Card/CardInfo/CardInfo";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [boards, setBoards] = useState([]);
@@ -187,6 +189,7 @@ function App() {
 
   return (
     <>
+      <ToastContainer />
       {showModal.status && (
         <CardInfo
           card={showModal.cardSelected}

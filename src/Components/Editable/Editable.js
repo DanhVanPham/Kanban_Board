@@ -1,19 +1,25 @@
 import React from "react";
 import "./Editable.css";
 import { X } from "react-feather";
+import { toast } from "react-toastify";
 
 function Editable(props) {
   const [editable, setEditable] = React.useState(false);
   const [inputValue, setInputValue] = React.useState(props.default || "");
 
-  const handleSubmitInput = (e) => {
+  const handleSubmitInput = async (e) => {
     e.preventDefault();
     if (!inputValue) {
-      alert("Please enter a value");
+      toast.warning("Please enter a value");
       return;
     }
-    props.onSubmit && props.onSubmit(inputValue);
-    setInputValue("");
+    let error = (await props.onSubmit) && props.onSubmit(inputValue);
+    if (!error) {
+      setInputValue("");
+    }
+    if (props.autoCloseAfterSubmit) {
+      setEditable(false);
+    }
   };
 
   const handleChangeInput = (e) => {

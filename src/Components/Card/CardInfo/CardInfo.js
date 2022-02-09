@@ -5,6 +5,7 @@ import Editable from "../../Editable/Editable";
 import { v4 as uuidv4 } from "uuid";
 import Modal from "../../Modal/Modal";
 import "./CardInfo.css";
+import { toast } from "react-toastify";
 
 function CardInfo(props) {
   const colors = [
@@ -34,7 +35,8 @@ function CardInfo(props) {
     switch (key) {
       case "labels":
         if (!activeColor) {
-          alert("Please select a color");
+          toast.warning("Please select a color");
+          return true;
         } else {
           let tmp = [...values.labels];
           let tempLabel = {
@@ -96,6 +98,7 @@ function CardInfo(props) {
             <div className="cardinfo_box_body">
               <Editable
                 text={values.title}
+                autoCloseAfterSubmit
                 default={values.title}
                 buttonText="Set Title"
                 placeholder="Enter Title"
@@ -112,6 +115,7 @@ function CardInfo(props) {
               <Editable
                 text={values.desc || "Enter description"}
                 default={values.desc}
+                autoCloseAfterSubmit
                 placeholder="Enter Description"
                 buttonText="Set Description"
                 onSubmit={(value) => handleChange("desc", value)}
