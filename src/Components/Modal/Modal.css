@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .modal-content {
@@ -16,4 +17,11 @@
     border-radius: 3px;
     max-height: 95vh;
     overflow-y: auto;
+}
+
+@media screen and (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+        max-width: 100%;
+    }
 }
