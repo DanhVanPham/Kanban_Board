@@ -1,0 +1,75 @@
+.card {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.card_top_more {
+    position: relative;
+    cursor: pointer;
+}
+
+.card_dropdown {
+    background-color: #fff;
+    width: 130px;
+    border-radius: 3px;
+    box-shadow: 1px 0 20px rgba(0,0,0,0.05);
+}
+
+.card_dropdown p {
+    padding: 10px;
+    cursor: pointer;
+    
+}
+
+.card_dropdown p:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.card_top {
+    display: flex;
+    gap: 5px;
+}
+
+.card_top_labels {
+    flex: 1;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card_top svg {
+    cursor: pointer;
+    opacity: 0;
+    transition: 200ms;
+    color: #172b4d;
+    pointer-events: none;
+}
+
+.card:hover .card_top svg {
+    opacity: 1;
+}
+
+.card_title {
+    font-weight: 600;
+}
+
+.card_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card_footer p {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.card_footer svg {
+    width: 14px;    
+    height: 14px;
+}

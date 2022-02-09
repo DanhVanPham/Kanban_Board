@@ -1,0 +1,83 @@
+.board {
+    min-width: 275px;
+    max-width: 275px;
+    max-height: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: #ebecf0;
+    border-radius: 6px;
+    padding: 4px;
+}
+
+.board_top {
+    display: flex;
+    align-items: center;
+}
+
+.board_top svg {
+    color: #172b4d;
+    cursor: pointer;
+}
+
+.board_top_more {
+    position: relative;
+}
+
+.board_dropdown {
+    background-color: #fff;
+    width: 130px;
+    border-radius: 3px;
+    box-shadow: 1px 0 20px rgba(0,0,0,0.05);
+}
+
+.board_dropdown p {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.board_dropdown p:hover {
+    background-color: rgba(0,0,0,0.05);
+}
+
+.board_top_title {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    flex: 1;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0px 8px;
+}
+/* 
+.board_top_title_name {
+    
+} */
+
+.board_top_title_count {
+    font-size: 16px;
+    color: #172b4d;
+}
+
+.board_cards {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 10px;
+    height:100%;
+    flex: 1;
+    overflow-y: auto;
+}
+
+.board_cards_add {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 1px 0 0px rgba(0,0,0,0.15);
+}
+
+.board_cards_add:hover {
+    box-shadow: 1px 1px 0 0px #ccc;
+}
