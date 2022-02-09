@@ -15,8 +15,9 @@
 .modal-content {
     background-color: #fff;
     border-radius: 3px;
-    max-height: 95vh;
+    max-height: 90vh;
     overflow-y: auto;
+    display: flex;
 }
 
 @media screen and (max-width: 600px) {

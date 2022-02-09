@@ -1,11 +1,25 @@
 .cardinfo {
-    padding: 20px;
     background-color: #fff;
+    width: 660px;
+    max-width: 660px;
     display: flex;
     flex-direction: column;
-    gap: 26px;    
-    width: 600px;
-    max-width: 600px;
+}
+
+.cardinfo_top {
+    text-align: right;
+    padding: 8px;
+}
+
+.cardinfo_top svg {
+    cursor: pointer;
+}
+
+.cardinfo_content {
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    row-gap: 26px;    
 }
 
 @media screen and (max-width: 600px) {
